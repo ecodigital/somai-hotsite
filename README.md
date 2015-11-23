@@ -28,7 +28,7 @@ $ python -m SimpleHTTPServer
 
 Acesse http://localhost:8000
 
-## Deploy automático no [Github Pages]((https://pages.github.com/)
+## Deploy automático no [Github Pages](https://pages.github.com/)
 
 ```sh
 $ grunt deploy
