@@ -12,7 +12,8 @@ module.exports = function(grunt) {
       all: {
         options: {
           mangle: true,
-          compress: true
+          compress: true,
+          sourceMap: true
         },
         files: {
           'dist/app.js': 'dist/app.js',
@@ -22,7 +23,8 @@ module.exports = function(grunt) {
     less: {
       all: {
         options: {
-          compress: true
+          compress: true,
+          sourceMap: true
         },
         files: {
           'dist/css/app.css': 'src/css/main.less'
