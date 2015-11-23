@@ -7,17 +7,17 @@
 
 ## Instalação
 
-```
-$ sudo npm install -g grunt-cli
+```sh
+$ sudo npm install -g grunt-cli bower
 $ git clone https://github.com/ecodigital/somai-hotsite.git
 $ cd somai-hotsite
-$ npm install
+$ npm install && bower install
 $ grunt build
 ```
 
 ## Rodando o app
 
-```
+```sh
 $ cd dist
 $ python -m SimpleHTTPServer
 ```
