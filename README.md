@@ -17,6 +17,10 @@ $ grunt build
 
 ## Rodando o app
 
+Os arquivos do aplicativo estão no diretório `dist/`, que pode ser copiado para um servidor apache/nginx.
+
+Para desenvolvimento você pode rodar um servidor simples em python:
+
 ```sh
 $ cd dist
 $ python -m SimpleHTTPServer
