@@ -11,6 +11,31 @@ html
     link(rel="stylesheet" href="css/app.css")
   body
     header#masthead
+      .header-content
+        .container.row
+          .three.columns
+            h1
+              a(ui-sref="home") SOMAI
+                img(src="img/logo.png")
+          .nine.columns
+            nav#mastnav
+              ul.parent
+                li
+                  a(href="#") Sobre
+                li
+                  a(href="#") Terras indígenas
+                li
+                  a(href="#") Ameaças
+                li
+                  a(href="#") Glossário
+                li
+                  a(href="#") Explore a plataforma
+        .info
+          .container
+            .twelve.columns
+              .info-content
+                h2 Sistema de Observação e Monitoramento da Amazônia Indígena
+                p Informação científica para ajudar os povos indígenas na adaptação aos impactos da mudança do clima.
     script(type="text/javascript" src="static/jquery/dist/jquery.min.js")
     script(type="text/javascript" src="static/angular/angular.min.js")
     script(type="text/javascript" src="static/ui-router/release/angular-ui-router.min.js")
