@@ -12,24 +12,26 @@ html
   body
     header#masthead
       .header-content
-        .container.row
-          .three.columns
-            h1
-              a(ui-sref="home") SOMAI
-                img(src="img/logo.png")
-          .nine.columns
-            nav#mastnav
-              ul.parent
-                li
-                  a(href="#") Sobre
-                li
-                  a(href="#") Terras indígenas
-                li
-                  a(href="#") Ameaças
-                li
-                  a(href="#") Glossário
-                li
-                  a(href="#") Explore a plataforma
+        .header-fixed(scroll-class="active" offset="100")
+          .container.row
+            .three.columns
+              h1
+                a(ui-sref="home") SOMAI
+                  img(src="img/logo.png")
+                  img.active(src="img/logo_cor.png")
+            .nine.columns
+              nav#mastnav
+                ul.parent
+                  li
+                    a(href="#") Sobre
+                  li
+                    a(href="#") Terras indígenas
+                  li
+                    a(href="#") Ameaças
+                  li
+                    a(href="#") Glossário
+                  li
+                    a(href="#") Explore a plataforma
         .info
           .container
             .twelve.columns

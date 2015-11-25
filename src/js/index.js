@@ -1,4 +1,4 @@
-(function(angular, undefined) {
+(function(angular, $, undefined) {
 
   var app = angular.module('somai', [
     'ui.router'
@@ -52,8 +52,35 @@
     }
   ]);
 
+  app.directive('scrollClass', [
+    function() {
+      return {
+        restrict: 'A',
+        scope: {
+          'scrollClass': '@',
+          'offset': '@'
+        },
+        link: function(scope, element, attrs) {
+
+          if(scope.offset) {
+
+            $(window).bind('scroll', function() {
+              if($(window).scrollTop() >= parseInt(scope.offset)) {
+                $(element[0]).addClass(scope.scrollClass);
+              } else {
+                $(element[0]).removeClass(scope.scrollClass);
+              }
+            });
+
+          }
+
+        }
+      }
+    }
+  ]);
+
   angular.element(document).ready(function() {
     angular.bootstrap(document, ['somai']);
   });
 
-})(window.angular);
+})(window.angular, window.jQuery);

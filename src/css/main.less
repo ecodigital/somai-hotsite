@@ -59,17 +59,55 @@ input[type="submit"] {
   .header-content {
     position: relative;
     z-index: 3;
+    padding-top: 100px;
+  }
+  .header-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 37px;
+    padding: 20px 0;
+    z-index: 99999;
+    transition: all .4s ease-in-out;
+    &.active {
+      color: #666;
+      background: #fff;
+      h1 {
+        width: 87px;
+        height: 22px;
+        margin-top: 7px;
+        img {
+          opacity: 0;
+          &.active {
+            opacity: 1;
+          }
+        }
+      }
+    }
   }
   h1 {
     line-height: 0;
     text-indent: -9999px;
     width: 139px;
     height: 37px;
+    margin: 0;
+    position: relative;
+    transition: all .6s ease-in-out;
     a {
       outline: none;
     }
     img {
+      top: 0;
+      left: 0;
+      position: absolute;
       display: block;
+      width: 100%;
+      height: auto;
+      transition: all .4s ease-in-out;
+      &.active {
+        opacity: 0;
+      }
     }
   }
   #mastnav {
