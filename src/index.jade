@@ -1,64 +1,64 @@
-doctype html
-html
-  head
-    title SOMAI
-    meta(charset="utf-8")
-    meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
-    meta(name="viewport" content="width=device-width,initial-scale=1")
-    meta(name="fragment" content="!")
-    link(rel="stylesheet" href="static/skeleton/css/normalize.css")
-    link(rel="stylesheet" href="static/skeleton/css/skeleton.css")
-    link(rel="stylesheet" href="css/app.css")
-  body
-    header#masthead
-      .header-content
-        .header-fixed(scroll-class="active" offset="100")
-          .container.row
-            .three.columns
-              h1
-                a(ui-sref="home") SOMAI
-                  img(src="img/logo.png")
-                  img.active(src="img/logo_cor.png")
-            .nine.columns
-              nav#mastnav
-                ul.parent
-                  li
-                    a(href="#") Sobre
-                  li
-                    a(href="#") Terras indígenas
-                  li
-                    a(href="#") Ameaças
-                  li
-                    a(href="#") Glossário
-                  li
-                    a(href="#") Explore a plataforma
-        .info
-          .container
-            .twelve.columns
-              .info-content
-                h2 Sistema de Observação e Monitoramento da Amazônia Indígena
-                p Informação científica para ajudar os povos indígenas na adaptação aos impactos da mudança do clima.
-    section#main-info
-      .container
-        .four.columns
-          .main-widget
-            img.icon(src="img/oq.png")
-            h2 O que é
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.
-            a.button(href="#") Conheça a iniciativa
-        .four.columns
-          .main-widget
-            img.icon(src="img/pq.png")
-            h2 Para quem
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.
-            a.button(href="#") Busque territórios indígenas
-        .four.columns
-          .main-widget
-            img.icon(src="img/cf.png")
-            h2 Como funciona
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.
-            a.button(href="#") Veja os mapas e dados
-    script(type="text/javascript" src="static/jquery/dist/jquery.min.js")
-    script(type="text/javascript" src="static/angular/angular.min.js")
-    script(type="text/javascript" src="static/ui-router/release/angular-ui-router.min.js")
-    script(type="text/javascript" src="app.js")
+extends views/includes/layouts/site
+
+block title
+  title SOMAI
+  
+block head
+  // Extra CSS and <head /> tags here
+
+block header-branding
+  h1(du-smooth-scroll="masthead")
+    a(ui-sref="home") SOMAI
+      img(src="img/logo.png")
+      img.active(src="img/logo_cor.png")
+      
+block header-nav
+  include views/includes/nav
+
+block header-info
+  h2 Sistema de Observação e Monitoramento da Amazônia Indígena
+  p Informação científica para ajudar os povos indígenas na adaptação aos impactos da mudança do clima.
+  
+block summary
+  .container
+    .four.columns
+      .summary-widget
+        img.icon(src="img/oq.png" alt="O que é")
+        h2 O que é
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.
+        p
+          a.button(href="#") Conheça a iniciativa
+    .four.columns
+      .summary-widget
+        img.icon(src="img/pq.png" alt="Para quem")
+        h2 Para quem
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.
+        p
+          a.button(href="#") Busque territórios indígenas
+    .four.columns
+      .summary-widget
+        img.icon(src="img/cf.png" alt="Como funciona")
+        h2 Como funciona
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.
+        p
+          a.button(href="#") Veja os mapas e dados
+
+block sections
+  section#sobre.section-group
+    section#sobre_objetivos
+      include views/includes/sobre/objetivos
+    section#sobre_dados
+      include views/includes/sobre/dados
+    section#sobre_equipe
+      include views/includes/sobre/equipe
+  section#terras-indigenas.section-group
+    section#terras-indigenas_mapa
+      include views/includes/terras-indigenas/mapa
+    section#terras-indigenas_relatorio
+      include views/includes/terras-indigenas/relatorio
+  section#ameacas.section-group
+    section#ameacas_objetivos
+      include views/includes/sobre/objetivos
+    
+block foot
+  // Extra footer content here (before closing <body /> tag)

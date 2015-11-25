@@ -1,8 +1,11 @@
 (function(angular, $, undefined) {
 
   var app = angular.module('somai', [
-    'ui.router'
+    'ui.router',
+    'duScroll'
   ]);
+
+  app.value('duScrollOffset', 170);
 
   app.config([
     '$stateProvider',
@@ -20,6 +23,30 @@
       $stateProvider
       .state('home', {
         url: '/'
+      })
+      .state('sobre', {
+        url: '/sobre/'
+      })
+      .state('sobre.objetivos', {
+        url: 'objetivos/'
+      })
+      .state('sobre.dados', {
+        url: 'dados/'
+      })
+      .state('sobre.equipe', {
+        url: 'equipe/'
+      })
+      .state('terras-indigenas', {
+        url: '/terras-indigenas/'
+      })
+      .state('terras-indigenas.mapa', {
+        url: 'mapa/'
+      })
+      .state('terras-indigenas.relatorio', {
+        url: 'relatorio/'
+      })
+      .state('ameacas', {
+        url: '/ameacas/'
       });
 
       /*
@@ -62,20 +89,45 @@
         },
         link: function(scope, element, attrs) {
 
+          function doClass() {
+            if($(window).scrollTop() >= parseInt(scope.offset)) {
+              $(element[0]).addClass(scope.scrollClass);
+            } else {
+              $(element[0]).removeClass(scope.scrollClass);
+            }
+          }
+
           if(scope.offset) {
-
-            $(window).bind('scroll', function() {
-              if($(window).scrollTop() >= parseInt(scope.offset)) {
-                $(element[0]).addClass(scope.scrollClass);
-              } else {
-                $(element[0]).removeClass(scope.scrollClass);
-              }
-            });
-
+            doClass();
+            $(window).bind('scroll', doClass);
           }
 
         }
       }
+    }
+  ]);
+
+  app.controller('SiteCtrl', [
+    '$scope',
+    '$state',
+    '$document',
+    function($scope, $state, $document) {
+
+      $scope.$on('$stateChangeSuccess', function(ev, toState, toParams, fromState) {
+        if(!fromState.name) {
+          var el = angular.element(document.getElementById(toState.name.replace('.', '_')));
+          if(el.length) {
+            $document.scrollToElementAnimated(el);
+          }
+        }
+      });
+
+      $scope.$on('duScrollspy:becameActive', function($ev, $element, $target) {
+        $state.go($target.attr('id').replace('_', '.'));
+      });
+      $scope.$on('duScrollspy:becameInactive', function() {
+        $state.go('home');
+      });
     }
   ]);
 

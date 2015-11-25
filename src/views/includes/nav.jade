@@ -1,0 +1,30 @@
+ul.parent
+  li(du-smooth-scroll="sobre" du-scrollspy ui-sref-active="active")
+    a(ui-sref="sobre") Sobre
+    .child
+      .container
+        .twelve.columns
+          ul
+            li(du-smooth-scroll="sobre_objetivos" du-scrollspy ui-sref-active="active")
+              a(ui-sref="sobre.objetivos") Objetivos
+            li(du-smooth-scroll="sobre_dados" du-scrollspy ui-sref-active="active")
+              a(ui-sref="sobre.dados") Dados e fontes
+            li(du-smooth-scroll="sobre_equipe" du-scrollspy ui-sref-active="active")
+              a(ui-sref="sobre.equipe") Equipe
+              
+  li(du-smooth-scroll="terras-indigenas" du-scrollspy ui-sref-active="active")
+    a(ui-sref="terras-indigenas") Terras indígenas
+    .child
+      .container
+        .twelve.columns
+          ul
+            li(du-smooth-scroll="terras-indigenas_mapa" du-scrollspy ui-sref-active="active")
+              a(ui-sref="terras-indigenas.mapa") Mapa por território
+            li(du-smooth-scroll="terras-indigenas_relatorio" du-scrollspy ui-sref-active="active")
+              a(ui-sref="terras-indigenas.relatorio") Relatório do território    
+  li(du-smooth-scroll="ameacas" du-scrollspy ui-sref-active="active")
+    a(ui-sref="ameacas" ui-sref-active="active") Ameaças
+  li
+    a(ui-sref="glossario" ui-sref-active="active") Glossário
+  li
+    a(href="#") Explore a plataforma

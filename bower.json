@@ -17,6 +17,7 @@
     "skeleton": "~2.0.4",
     "angular": "~1.4.7",
     "ui-router": "~0.2.15",
-    "jquery": "~2.1.4"
+    "jquery": "~2.1.4",
+    "angular-scroll": "~1.0.0"
   }
 }
