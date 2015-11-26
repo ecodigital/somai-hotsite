@@ -33,8 +33,8 @@
       .state('sobre.dados', {
         url: 'dados/'
       })
-      .state('sobre.equipe', {
-        url: 'equipe/'
+      .state('sobre.parceiros', {
+        url: 'parceiros/'
       })
       .state('terras-indigenas', {
         url: '/terras-indigenas/'
