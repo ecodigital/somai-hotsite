@@ -98,6 +98,18 @@ input[type="submit"] {
               a {
                 color: #333;
               }
+              .child {
+                ul {
+                  li {
+                    &:hover,
+                    &.active {
+                      a {
+                        color: #fff;
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -272,6 +284,63 @@ input[type="submit"] {
     p {
       font-size: 16px;
       color: @text_gray;
+    }
+  }
+  .section-content {
+    h3 {
+      font-size: 20px;
+      color: @text_orange;
+    }
+    h4 {
+      font-size: 24px;
+      font-family: "Open Sans";
+      font-weight: normal;
+      text-transform: none;
+    }
+    .partner-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        width: 50%;
+        float: left;
+        text-align: center;
+        margin: 0 0 20px;
+      }
+    }
+  }
+}
+
+table.duel-table {
+  thead {
+    th {
+      font-weight: normal;
+      text-transform: lowercase;
+      font-size: 14px;
+    }
+  }
+  tr {
+    th:first-child,
+    td:first-child {
+      color: @text_orange;
+      text-align: right;
+    }
+    th:last-child,
+    td:last-child {
+      color: @text_gray;
+    }
+    th,
+    td {
+      width: 50%;
+      border-bottom: 0;
+      padding: 15px;
+      line-height: 20px;
+    }
+    td:first-child {
+      font-weight: 800;
+    }
+    td:last-child {
+      font-size: 14px;
     }
   }
 }
