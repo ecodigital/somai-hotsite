@@ -1,0 +1,16 @@
+extends ../layouts/section
+
+block section-title
+  h2 Calculadora
+  p Essa aba utiliza uma combinação dos dados disponíveis em Ameaças climáticas e Ameaças antrópicas para calcular quais Terras Indígenas estão mais ameaçadas, de acordo com os itens selecionados. As Terras Indígenas são classificadas de acordo com a intensidade do impacto sofrido pelas ameaças climáticas ou antrópicas. De maneira interativa e dinâmica pode-se separar os territórios muito impactados daqueles menos impactados por cada ameaça.
+
+block section-content
+  .gallery
+    nav.gallery-nav
+      button.left
+        span.icon <
+      button.right
+        span.icon >
+      span.current Desmatamento + Terras indígenas
+    .gallery-content
+      img(expand="right" src="img/calc_1.jpg")

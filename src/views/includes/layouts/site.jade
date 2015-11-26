@@ -9,6 +9,7 @@ html
     meta(name="fragment" content="!")
     link(rel="stylesheet" href="static/skeleton/css/normalize.css")
     link(rel="stylesheet" href="static/skeleton/css/skeleton.css")
+    link(rel="stylesheet" href="css/icons.css")
     link(rel="stylesheet" href="css/app.css")
     block head
   body(ng-controller="SiteCtrl")
@@ -30,6 +31,10 @@ html
       block summary
     .site-sections
       block sections
+    footer#colophon
+      .container
+        .twelve.columns
+          block colophon
     script(type="text/javascript" src="static/jquery/dist/jquery.min.js")
     script(type="text/javascript" src="static/angular/angular.min.js")
     script(type="text/javascript" src="static/ui-router/release/angular-ui-router.min.js")

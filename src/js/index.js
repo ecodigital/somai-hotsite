@@ -5,7 +5,7 @@
     'duScroll'
   ]);
 
-  app.value('duScrollOffset', 170);
+  app.value('duScrollOffset', 190);
 
   app.config([
     '$stateProvider',
@@ -47,6 +47,18 @@
       })
       .state('ameacas', {
         url: '/ameacas/'
+      })
+      .state('ameacas.mapas', {
+        url: 'mapas/'
+      })
+      .state('ameacas.clima', {
+        url: 'clima/'
+      })
+      .state('ameacas.antropica', {
+        url: 'antropica/'
+      })
+      .state('ameacas.calc', {
+        url: 'calculadora/'
       });
 
       /*
@@ -106,6 +118,37 @@
       }
     }
   ]);
+
+  app.directive('expand', [
+    function() {
+      return {
+        restrict: 'A',
+        scope: {
+          'expand': '@'
+        },
+        link: function(scope, element, attrs) {
+          if(scope.expand == 'right') {
+
+            function doExpand() {
+              var wWidth = $(window).width();
+              var elWidth = $(element).offset().left;
+
+              var width = wWidth - elWidth;
+
+              $(element).css({
+                width: width,
+                height: 'auto'
+              });
+            }
+
+            doExpand();
+            $(window).bind('resize', doExpand);
+
+          }
+        }
+      }
+    }
+  ])
 
   app.controller('SiteCtrl', [
     '$scope',

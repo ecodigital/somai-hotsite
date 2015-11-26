@@ -59,8 +59,21 @@ block sections
     section#terras-indigenas_relatorio
       include views/includes/terras-indigenas/relatorio
   section#ameacas.section-group
-    section#ameacas_objetivos
-      include views/includes/sobre/objetivos
+    section#ameacas_mapas
+      include views/includes/ameacas/mapas
+    section#ameacas_clima
+      include views/includes/ameacas/clima
+    section#ameacas_antropica
+      include views/includes/ameacas/antropica
+    section#ameacas_calc
+      include views/includes/ameacas/calc
+
+block colophon
+  a.footer-brand(ui-sref="home") SOMAI
+    img(src="img/logo.png")
+  a.platform(href="#")
+    span.icon.icon-map
+    | Explore a plataforma
     
 block foot
   // Extra footer content here (before closing <body /> tag)

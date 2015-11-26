@@ -24,7 +24,21 @@ ul.parent
               a(ui-sref="terras-indigenas.relatorio") Relatório do território    
   li(ui-sref-active="active" du-smooth-scroll="ameacas" du-scrollspy)
     a(ui-sref="ameacas") Ameaças
+    .child
+      .container
+        .twelve.columns
+          ul
+            li(ui-sref-active="active" du-smooth-scroll="ameacas_mapas" du-scrollspy )
+              a(ui-sref="ameacas.mapas") Mapas
+            li(ui-sref-active="active" du-smooth-scroll="ameacas_clima" du-scrollspy )
+              a(ui-sref="ameacas.clima") Ameaças Climáticas
+            li(ui-sref-active="active" du-smooth-scroll="ameacas_antropica" du-scrollspy )
+              a(ui-sref="ameacas.antropica") Ameaças Antrópicas
+            li(ui-sref-active="active" du-smooth-scroll="ameacas_calc" du-scrollspy )
+              a(ui-sref="ameacas.calc") Calculadora
   li(ui-sref-active="active")
     a(ui-sref="glossario") Glossário
-  li
-    a(href="#") Explore a plataforma
+  li.highlight
+    a(href="#")
+      span.icon.icon-map
+      | Explore a plataforma
