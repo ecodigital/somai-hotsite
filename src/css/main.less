@@ -90,6 +90,18 @@ input[type="submit"] {
           }
         }
       }
+      #mastnav {
+        ul.parent {
+          > li {
+            &:hover,
+            &.active {
+              a {
+                color: #333;
+              }
+            }
+          }
+        }
+      }
     }
   }
   h1 {
@@ -153,10 +165,6 @@ input[type="submit"] {
           display: block;
           padding: 0;
           line-height: 77px;
-        }
-        &:hover,
-        &.active {
-          color: #333;
         }
         &.active {
           &:after {
