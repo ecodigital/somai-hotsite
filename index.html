@@ -8,6 +8,7 @@
     <meta name="fragment" content="!">
     <link rel="stylesheet" href="static/skeleton/css/normalize.css">
     <link rel="stylesheet" href="static/skeleton/css/skeleton.css">
+    <link rel="stylesheet" href="css/icons.css">
     <link rel="stylesheet" href="css/app.css">
     <!-- Extra CSS and <head /> tags here-->
   </head>
@@ -47,9 +48,22 @@
                       </div>
                     </div>
                   </li>
-                  <li ui-sref-active="active" du-smooth-scroll="ameacas" du-scrollspy><a ui-sref="ameacas">Ameaças</a></li>
+                  <li ui-sref-active="active" du-smooth-scroll="ameacas" du-scrollspy><a ui-sref="ameacas">Ameaças</a>
+                    <div class="child">
+                      <div class="container">
+                        <div class="twelve columns">
+                          <ul>
+                            <li ui-sref-active="active" du-smooth-scroll="ameacas_mapas" du-scrollspy><a ui-sref="ameacas.mapas">Mapas</a></li>
+                            <li ui-sref-active="active" du-smooth-scroll="ameacas_clima" du-scrollspy><a ui-sref="ameacas.clima">Ameaças Climáticas</a></li>
+                            <li ui-sref-active="active" du-smooth-scroll="ameacas_antropica" du-scrollspy><a ui-sref="ameacas.antropica">Ameaças Antrópicas</a></li>
+                            <li ui-sref-active="active" du-smooth-scroll="ameacas_calc" du-scrollspy><a ui-sref="ameacas.calc">Calculadora</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
                   <li ui-sref-active="active"><a ui-sref="glossario">Glossário</a></li>
-                  <li><a href="#">Explore a plataforma</a></li>
+                  <li class="highlight"><a href="#"><span class="icon icon-map"></span>Explore a plataforma</a></li>
                 </ul>
               </nav>
             </div>
@@ -99,13 +113,13 @@
         <section id="sobre_objetivos">
           <div class="site-section">
             <div class="container">
-              <div class="five columns">
+              <div class="four columns">
                 <header class="section-header">
                   <h2>Objetivos</h2>
                   <p>Fornecer informações que facilitem o desenvolvimento de planos indígenas de mitigação e adaptação às mudanças climáticas para as Terras Indígenas da Amazônia brasileira.</p>
                 </header>
               </div>
-              <div class="seven columns">
+              <div class="seven columns offset-by-one">
                 <div class="section-content">
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
                 </div>
@@ -116,13 +130,13 @@
         <section id="sobre_dados">
           <div class="site-section">
             <div class="container">
-              <div class="five columns">
+              <div class="four columns">
                 <header class="section-header">
                   <h2>Dados e fontes</h2>
                   <p>O SOMAI utiliza fontes oficiais para seus dados, além de buscar sempre as fontes mais atualizadas para as informações apresentadas.</p>
                 </header>
               </div>
-              <div class="seven columns">
+              <div class="seven columns offset-by-one">
                 <div class="section-content">
                   <table class="duel-table">
                     <thead>
@@ -226,12 +240,12 @@
         <section id="sobre_parceiros">
           <div class="site-section">
             <div class="container">
-              <div class="five columns">
+              <div class="four columns">
                 <header class="section-header">
                   <h2>Parceiros</h2>
                 </header>
               </div>
-              <div class="seven columns">
+              <div class="seven columns offset-by-one">
                 <div class="section-content">
                   <div class="row">
                     <h3>Realização</h3>
@@ -286,15 +300,14 @@
         <section id="terras-indigenas_mapa">
           <div class="site-section">
             <div class="container">
-              <div class="five columns">
+              <div class="four columns">
                 <header class="section-header">
-                  <h2>Mapa por território</h2>
-                  <p>Lorem ipsum</p>
+                  <h2>Mapa por Terra Indígena</h2>
                 </header>
               </div>
-              <div class="seven columns">
+              <div class="seven columns offset-by-one">
                 <div class="section-content">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
+                  <p>Ao selecionar o nome de uma Terra Indígena, o SOMAI dá destaque à essa Terra. Além do zoom, é possível gerar relatórios individuais para a Terra selecionada com informações individualizadas tais como: presença de conflitos e percepção das mudanças ambientais pelos indígenas. O objetivo é que seja disponibilizado nos relatórios dados coletados pelos indígenas que vivem naquela Terra.</p>
                 </div>
               </div>
             </div>
@@ -303,15 +316,15 @@
         <section id="terras-indigenas_relatorio">
           <div class="site-section">
             <div class="container">
-              <div class="five columns">
+              <div class="four columns">
                 <header class="section-header">
-                  <h2>Relatório por território</h2>
-                  <p>Lorem ipsum</p>
+                  <h2>Relatório por Terra Indígena</h2>
+                  <p>O SOMAI possui um relatório específico para cada Terra Indígena Amazônica. No relatório é possível encontrar dados gerais como a localização, área e população; e dados climáticos com foco naquela Terra Indígena. Há também gráficos para o melhor entendimento de como está a situação de cada Terra Indígena Amazônica.</p>
                 </header>
               </div>
-              <div class="seven columns">
+              <div class="seven columns offset-by-one">
                 <div class="section-content">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
+                  <p> </p>
                 </div>
               </div>
             </div>
@@ -319,18 +332,89 @@
         </section>
       </section>
       <section id="ameacas" class="section-group">
-        <section id="ameacas_objetivos">
+        <section id="ameacas_mapas">
           <div class="site-section">
             <div class="container">
-              <div class="five columns">
+              <div class="four columns">
                 <header class="section-header">
-                  <h2>Objetivos</h2>
-                  <p>Fornecer informações que facilitem o desenvolvimento de planos indígenas de mitigação e adaptação às mudanças climáticas para as Terras Indígenas da Amazônia brasileira.</p>
+                  <h2>Mapas</h2>
                 </header>
               </div>
-              <div class="seven columns">
+              <div class="seven columns offset-by-one">
                 <div class="section-content">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
+                  <p>Os mapas apresentados nesta parte trazem diferentes tipos de dados históricos de cada um até o momento atual. Esses dados contêm informações sobre o clima - temperatura, chuva e índices de seca -, dados de estoque de carbono, registros de desmatamento e distribuição das espécies ameaças.</p>
+                  <p>Em Mapas de apoio, é possível realizar a combinação de dados geográficos territoriais, uso do solo e infraestrutura com outros mapas disponíveis no SOMAI, como desmatamento, por exemplo para evidenciar como certas atividades impactam diretamente as Terras Indígenas.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="ameacas_clima">
+          <div class="site-section">
+            <div class="container">
+              <div class="four columns">
+                <header class="section-header">
+                  <h2>Ameaças Climáticas</h2>
+                  <p>As informações encontradas foram geradas com base nos modelos climáticos do 5º Relatório de Avaliação do IPCC para 2050. Foi utilizada a média de 17 modelos climáticos diferentes para construir esses mapas que trazem informações das tendências de mudança nos padrões de chuva,  temperatura e distribuição de biodiversidade. Ainda que esses modelos sejam amplamente aceitos no meio científico, há uma incerteza associada a cada um desses modelos, por isso foi incluído um mapa adicional a cada mapa de Ameaças Climáticas, sobre incerteza dos modelos.</p>
+                </header>
+              </div>
+              <div class="seven columns offset-by-one">
+                <div class="section-content">
+                  <div class="gallery">
+                    <nav class="gallery-nav">
+                      <button class="left"><span class="icon"><</span></button>
+                      <button class="right"><span class="icon">></span></button><span class="current">Perda de biodiversidade</span>
+                    </nav>
+                    <div class="gallery-content"><img expand="right" src="img/clim_1.jpg">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="ameacas_antropica">
+          <div class="site-section">
+            <div class="container">
+              <div class="four columns">
+                <header class="section-header">
+                  <h2>Ameaças Antrópicas</h2>
+                  <p>As Ameaças antrópicas são, basicamente, as mudanças do uso do solo e da paisagem provocadas pela ação humana. As mudanças não aconteceram de maneira igual ao longo da Amazônia brasileira, por isso as alterações ambientais e obras de infraestrutura impactam com uma intensidade diferente cada Terra Indígena.</p>
+                </header>
+              </div>
+              <div class="seven columns offset-by-one">
+                <div class="section-content">
+                  <div class="gallery">
+                    <nav class="gallery-nav">
+                      <button class="left"><span class="icon"><</span></button>
+                      <button class="right"><span class="icon">></span></button><span class="current">Potencial de mineração</span>
+                    </nav>
+                    <div class="gallery-content"><img expand="right" src="img/antr_1.jpg">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="ameacas_calc">
+          <div class="site-section">
+            <div class="container">
+              <div class="four columns">
+                <header class="section-header">
+                  <h2>Calculadora</h2>
+                  <p>Essa aba utiliza uma combinação dos dados disponíveis em Ameaças climáticas e Ameaças antrópicas para calcular quais Terras Indígenas estão mais ameaçadas, de acordo com os itens selecionados. As Terras Indígenas são classificadas de acordo com a intensidade do impacto sofrido pelas ameaças climáticas ou antrópicas. De maneira interativa e dinâmica pode-se separar os territórios muito impactados daqueles menos impactados por cada ameaça.</p>
+                </header>
+              </div>
+              <div class="seven columns offset-by-one">
+                <div class="section-content">
+                  <div class="gallery">
+                    <nav class="gallery-nav">
+                      <button class="left"><span class="icon"><</span></button>
+                      <button class="right"><span class="icon">></span></button><span class="current">Desmatamento + Terras indígenas</span>
+                    </nav>
+                    <div class="gallery-content"><img expand="right" src="img/calc_1.jpg"></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -338,6 +422,11 @@
         </section>
       </section>
     </div>
+    <footer id="colophon">
+      <div class="container">
+        <div class="twelve columns"><a ui-sref="home" class="footer-brand">SOMAI<img src="img/logo.png"></a><a href="#" class="platform"><span class="icon icon-map"></span>Explore a plataforma</a></div>
+      </div>
+    </footer>
     <script type="text/javascript" src="static/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="static/angular/angular.min.js"></script>
     <script type="text/javascript" src="static/ui-router/release/angular-ui-router.min.js"></script>
