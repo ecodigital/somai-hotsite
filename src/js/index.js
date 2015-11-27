@@ -3,7 +3,8 @@
   var app = angular.module('somai', [
     'ui.router',
     'duScroll',
-    'localytics.directives'
+    'localytics.directives',
+    'angularLazyImg'
   ]);
 
   app.value('duScrollOffset', 190);
