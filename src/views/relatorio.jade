@@ -20,5 +20,5 @@ article.ti(ng-show="ti")
     span.label População:
     span.value {{ti.populacao}}
 form(ng-show="ti" target="_blank" method="post" action="http://www.somai.org/relatorios/relatorio_pti/mudancasclimaticas.php")
-  input(type="hidden" name="id" value="{{ti.id}}")
+  input(type="hidden" name="id" ng-value="ti.id")
   input.full(type="submit" value="Acesse o relatório completo")
