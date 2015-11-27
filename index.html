@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="css/app.css">
     <!-- Extra CSS and <head /> tags here-->
   </head>
-  <body ng-controller="SiteCtrl">
+  <body ng-controller="SiteCtrl" ng-class="{inner: isInner}">
     <header id="masthead">
       <div class="header-content">
-        <div scroll-class="active" offset="100" class="header-fixed">
+        <div scroll-class="active" offset="100" ng-class="{locked: !isHome}" class="header-fixed">
           <div class="container row">
             <div class="three columns">
               <h1 du-smooth-scroll="masthead"><a ui-sref="home">SOMAI<img src="img/logo.png"><img src="img/logo_cor.png" class="active"></a></h1>
@@ -41,8 +41,8 @@
                       <div class="container">
                         <div class="twelve columns">
                           <ul>
-                            <li ui-sref-active="active" du-smooth-scroll="terras-indigenas_mapa" du-scrollspy><a ui-sref="terras-indigenas.mapa">Mapa por território</a></li>
-                            <li ui-sref-active="active" du-smooth-scroll="terras-indigenas_relatorio" du-scrollspy><a ui-sref="terras-indigenas.relatorio">Relatório do território    </a></li>
+                            <li ui-sref-active="active" du-smooth-scroll="terras-indigenas_mapa" du-scrollspy><a ui-sref="terras-indigenas.mapa">Mapa por terra indígena</a></li>
+                            <li ui-sref-active="active" du-smooth-scroll="terras-indigenas_relatorio" du-scrollspy><a ui-sref="terras-indigenas.relatorio">Relatório por terra indígena</a></li>
                           </ul>
                         </div>
                       </div>
@@ -108,319 +108,322 @@
         </div>
       </div>
     </section>
-    <div class="site-sections">
-      <section id="sobre" class="section-group">
-        <section id="sobre_objetivos">
-          <div class="site-section">
-            <div class="container">
-              <div class="four columns">
-                <header class="section-header">
-                  <h2>Objetivos</h2>
-                  <p>Fornecer informações que facilitem o desenvolvimento de planos indígenas de mitigação e adaptação às mudanças climáticas para as Terras Indígenas da Amazônia brasileira.</p>
-                </header>
-              </div>
-              <div class="seven columns offset-by-one">
-                <div class="section-content">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
+    <div ui-view>
+      <div class="site-sections">
+        <section id="sobre" class="section-group">
+          <section id="sobre_objetivos">
+            <div class="site-section">
+              <div class="container">
+                <div class="four columns">
+                  <header class="section-header">
+                    <h2>Objetivos</h2>
+                    <p>Fornecer informações que facilitem o desenvolvimento de planos indígenas de mitigação e adaptação às mudanças climáticas para as Terras Indígenas da Amazônia brasileira.</p>
+                  </header>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="sobre_dados">
-          <div class="site-section">
-            <div class="container">
-              <div class="four columns">
-                <header class="section-header">
-                  <h2>Dados e fontes</h2>
-                  <p>O SOMAI utiliza fontes oficiais para seus dados, além de buscar sempre as fontes mais atualizadas para as informações apresentadas.</p>
-                </header>
-              </div>
-              <div class="seven columns offset-by-one">
-                <div class="section-content">
-                  <table class="duel-table">
-                    <thead>
-                      <tr>
-                        <th>Dado</th>
-                        <th>Fonte</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Terras indígenas</td>
-                        <td>Instituto Socioambiental (ISA), 2015</td>
-                      </tr>
-                      <tr>
-                        <td>Sub-bacias</td>
-                        <td>ANA (Agência Nacional de Águas)</td>
-                      </tr>
-                      <tr>
-                        <td>Uso do solo</td>
-                        <td>Projeto TerraClass - INPE (Instituto Nacional de Pesquisas Espaciais)</td>
-                      </tr>
-                      <tr>
-                        <td>Rodovias</td>
-                        <td>DNIT (Departamento Nacional de Infraestrutura de Transportes)</td>
-                      </tr>
-                      <tr>
-                        <td>Unidades de conservação</td>
-                        <td>ICMBio (Instituto Chico Mendes - MMA)</td>
-                      </tr>
-                      <tr>
-                        <td>Biomas</td>
-                        <td>MMA (Ministério do Meio Ambiente)</td>
-                      </tr>
-                      <tr>
-                        <td>Hidrelétricas</td>
-                        <td>ANEEL (Agência Nacional de Energia Elétrica)</td>
-                      </tr>
-                      <tr>
-                        <td>Reservatórios</td>
-                        <td>ANEEL (Agência Nacional de Energia Elétrica)</td>
-                      </tr>
-                      <tr>
-                        <td>Linhas de transmissão</td>
-                        <td>ANEEL (Agência Nacional de Energia Elétrica)</td>
-                      </tr>
-                      <tr>
-                        <td>Portos</td>
-                        <td>DNIT (Departamento Nacional de Infraestrutura de Transporte)</td>
-                      </tr>
-                      <tr>
-                        <td>Polos madeireiros</td>
-                        <td>Imazon - Instituto do Homem e Meio Ambiente da Amazônia</td>
-                      </tr>
-                      <tr>
-                        <td>Tipos de vegetação</td>
-                        <td>IBGE (Instituto Brasileiro de Geografia e Estatística)</td>
-                      </tr>
-                      <tr>
-                        <td>Linhas de transformação</td>
-                        <td>ANEEL (Agência Nacional de Energia Elétrica)</td>
-                      </tr>
-                      <tr>
-                        <td>Mineração</td>
-                        <td>DNPM (Departamento Nacional de Produção Mineral)</td>
-                      </tr>
-                      <tr>
-                        <td>Desmatamento</td>
-                        <td>INPE/PRODES (Instituto Nacional de Pesquisas Espaciais)</td>
-                      </tr>
-                      <tr>
-                        <td>Chuva</td>
-                        <td>TRMM (Tropical Rainfall Measuring Mission)</td>
-                      </tr>
-                      <tr>
-                        <td>Temperatura</td>
-                        <td>MODIS, imagens MOD09Q1</td>
-                      </tr>
-                      <tr>
-                        <td>Frequência de seca</td>
-                        <td>SPEI Global Drought Monitor</td>
-                      </tr>
-                      <tr>
-                        <td>Anomalias de seca</td>
-                        <td>TRMM (Tropical Rainfall Measuring Mission)</td>
-                      </tr>
-                      <tr>
-                        <td>Estoque de carbono</td>
-                        <td>Baccini A, Goetz SJ, Walker WS, et al., 2012. Estimated carbon dioxide emissions from tropical deforestation improved by carbon-density maps. Nature Climate Change, 2(3):182–185.</td>
-                      </tr>
-                      <tr>
-                        <td>Focos de calor</td>
-                        <td>INPE (Instituto Nacional de Pesquisas Espaciais)</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="sobre_parceiros">
-          <div class="site-section">
-            <div class="container">
-              <div class="four columns">
-                <header class="section-header">
-                  <h2>Parceiros</h2>
-                </header>
-              </div>
-              <div class="seven columns offset-by-one">
-                <div class="section-content">
-                  <div class="row">
-                    <h3>Realização</h3>
-                    <ul class="partner-list">
-                      <li>
-                        <div class="avatar"></div>
-                        <h4>IPAM</h4>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="row">
-                    <h3>Apoio</h3>
-                    <ul class="partner-list">
-                      <li>
-                        <div class="avatar"></div>
-                        <h4>Embaixada Noruega</h4>
-                      </li>
-                      <li>
-                        <div class="avatar"></div>
-                        <h4>USAID</h4>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="row">
-                    <h3>Colaboração</h3>
-                    <ul class="partner-list">
-                      <li>
-                        <div class="avatar"></div>
-                        <h4>FUNAI</h4>
-                      </li>
-                      <li>
-                        <div class="avatar"></div>
-                        <h4>COIAB</h4>
-                      </li>
-                      <li>
-                        <div class="avatar"></div>
-                        <h4>APIB</h4>
-                      </li>
-                      <li>
-                        <div class="avatar"></div>
-                        <h4>Projeto GATI</h4>
-                      </li>
-                    </ul>
+                <div class="seven columns offset-by-one">
+                  <div class="section-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-      </section>
-      <section id="terras-indigenas" class="section-group">
-        <section id="terras-indigenas_mapa">
-          <div class="site-section">
-            <div class="container">
-              <div class="four columns">
-                <header class="section-header">
-                  <h2>Mapa por Terra Indígena</h2>
-                </header>
-              </div>
-              <div class="seven columns offset-by-one">
-                <div class="section-content">
-                  <p>Ao selecionar o nome de uma Terra Indígena, o SOMAI dá destaque à essa Terra. Além do zoom, é possível gerar relatórios individuais para a Terra selecionada com informações individualizadas tais como: presença de conflitos e percepção das mudanças ambientais pelos indígenas. O objetivo é que seja disponibilizado nos relatórios dados coletados pelos indígenas que vivem naquela Terra.</p>
+          </section>
+          <section id="sobre_dados">
+            <div class="site-section">
+              <div class="container">
+                <div class="four columns">
+                  <header class="section-header">
+                    <h2>Dados e fontes</h2>
+                    <p>O SOMAI utiliza fontes oficiais para seus dados, além de buscar sempre as fontes mais atualizadas para as informações apresentadas.</p>
+                  </header>
+                </div>
+                <div class="seven columns offset-by-one">
+                  <div class="section-content">
+                    <table class="duel-table">
+                      <thead>
+                        <tr>
+                          <th>Dado</th>
+                          <th>Fonte</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Terras indígenas</td>
+                          <td>Instituto Socioambiental (ISA), 2015</td>
+                        </tr>
+                        <tr>
+                          <td>Sub-bacias</td>
+                          <td>ANA (Agência Nacional de Águas)</td>
+                        </tr>
+                        <tr>
+                          <td>Uso do solo</td>
+                          <td>Projeto TerraClass - INPE (Instituto Nacional de Pesquisas Espaciais)</td>
+                        </tr>
+                        <tr>
+                          <td>Rodovias</td>
+                          <td>DNIT (Departamento Nacional de Infraestrutura de Transportes)</td>
+                        </tr>
+                        <tr>
+                          <td>Unidades de conservação</td>
+                          <td>ICMBio (Instituto Chico Mendes - MMA)</td>
+                        </tr>
+                        <tr>
+                          <td>Biomas</td>
+                          <td>MMA (Ministério do Meio Ambiente)</td>
+                        </tr>
+                        <tr>
+                          <td>Hidrelétricas</td>
+                          <td>ANEEL (Agência Nacional de Energia Elétrica)</td>
+                        </tr>
+                        <tr>
+                          <td>Reservatórios</td>
+                          <td>ANEEL (Agência Nacional de Energia Elétrica)</td>
+                        </tr>
+                        <tr>
+                          <td>Linhas de transmissão</td>
+                          <td>ANEEL (Agência Nacional de Energia Elétrica)</td>
+                        </tr>
+                        <tr>
+                          <td>Portos</td>
+                          <td>DNIT (Departamento Nacional de Infraestrutura de Transporte)</td>
+                        </tr>
+                        <tr>
+                          <td>Polos madeireiros</td>
+                          <td>Imazon - Instituto do Homem e Meio Ambiente da Amazônia</td>
+                        </tr>
+                        <tr>
+                          <td>Tipos de vegetação</td>
+                          <td>IBGE (Instituto Brasileiro de Geografia e Estatística)</td>
+                        </tr>
+                        <tr>
+                          <td>Linhas de transformação</td>
+                          <td>ANEEL (Agência Nacional de Energia Elétrica)</td>
+                        </tr>
+                        <tr>
+                          <td>Mineração</td>
+                          <td>DNPM (Departamento Nacional de Produção Mineral)</td>
+                        </tr>
+                        <tr>
+                          <td>Desmatamento</td>
+                          <td>INPE/PRODES (Instituto Nacional de Pesquisas Espaciais)</td>
+                        </tr>
+                        <tr>
+                          <td>Chuva</td>
+                          <td>TRMM (Tropical Rainfall Measuring Mission)</td>
+                        </tr>
+                        <tr>
+                          <td>Temperatura</td>
+                          <td>MODIS, imagens MOD09Q1</td>
+                        </tr>
+                        <tr>
+                          <td>Frequência de seca</td>
+                          <td>SPEI Global Drought Monitor</td>
+                        </tr>
+                        <tr>
+                          <td>Anomalias de seca</td>
+                          <td>TRMM (Tropical Rainfall Measuring Mission)</td>
+                        </tr>
+                        <tr>
+                          <td>Estoque de carbono</td>
+                          <td>Baccini A, Goetz SJ, Walker WS, et al., 2012. Estimated carbon dioxide emissions from tropical deforestation improved by carbon-density maps. Nature Climate Change, 2(3):182–185.</td>
+                        </tr>
+                        <tr>
+                          <td>Focos de calor</td>
+                          <td>INPE (Instituto Nacional de Pesquisas Espaciais)</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-        <section id="terras-indigenas_relatorio">
-          <div class="site-section">
-            <div class="container">
-              <div class="four columns">
-                <header class="section-header">
-                  <h2>Relatório por Terra Indígena</h2>
-                  <p>O SOMAI possui um relatório específico para cada Terra Indígena Amazônica. No relatório é possível encontrar dados gerais como a localização, área e população; e dados climáticos com foco naquela Terra Indígena. Há também gráficos para o melhor entendimento de como está a situação de cada Terra Indígena Amazônica.</p>
-                </header>
-              </div>
-              <div class="seven columns offset-by-one">
-                <div class="section-content">
-                  <p> </p>
+          </section>
+          <section id="sobre_parceiros">
+            <div class="site-section">
+              <div class="container">
+                <div class="four columns">
+                  <header class="section-header">
+                    <h2>Parceiros</h2>
+                  </header>
+                </div>
+                <div class="seven columns offset-by-one">
+                  <div class="section-content">
+                    <div class="row">
+                      <h3>Realização</h3>
+                      <ul class="partner-list">
+                        <li>
+                          <div class="avatar"></div>
+                          <h4>IPAM</h4>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <h3>Apoio</h3>
+                      <ul class="partner-list">
+                        <li>
+                          <div class="avatar"></div>
+                          <h4>Embaixada Noruega</h4>
+                        </li>
+                        <li>
+                          <div class="avatar"></div>
+                          <h4>USAID</h4>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <h3>Colaboração</h3>
+                      <ul class="partner-list">
+                        <li>
+                          <div class="avatar"></div>
+                          <h4>FUNAI</h4>
+                        </li>
+                        <li>
+                          <div class="avatar"></div>
+                          <h4>COIAB</h4>
+                        </li>
+                        <li>
+                          <div class="avatar"></div>
+                          <h4>APIB</h4>
+                        </li>
+                        <li>
+                          <div class="avatar"></div>
+                          <h4>Projeto GATI</h4>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="row"><a ui-sref="parceiros" class="button full">Saiba mais</a></div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
         </section>
-      </section>
-      <section id="ameacas" class="section-group">
-        <section id="ameacas_mapas">
-          <div class="site-section">
-            <div class="container">
-              <div class="four columns">
-                <header class="section-header">
-                  <h2>Mapas</h2>
-                </header>
-              </div>
-              <div class="seven columns offset-by-one">
-                <div class="section-content">
-                  <p>Os mapas apresentados nesta parte trazem diferentes tipos de dados históricos de cada um até o momento atual. Esses dados contêm informações sobre o clima - temperatura, chuva e índices de seca -, dados de estoque de carbono, registros de desmatamento e distribuição das espécies ameaças.</p>
-                  <p>Em Mapas de apoio, é possível realizar a combinação de dados geográficos territoriais, uso do solo e infraestrutura com outros mapas disponíveis no SOMAI, como desmatamento, por exemplo para evidenciar como certas atividades impactam diretamente as Terras Indígenas.</p>
+        <section id="terras-indigenas" class="section-group">
+          <section id="terras-indigenas_mapa">
+            <div class="site-section">
+              <div class="container">
+                <div class="four columns">
+                  <header class="section-header">
+                    <h2>Mapa por Terra Indígena</h2>
+                  </header>
+                </div>
+                <div class="seven columns offset-by-one">
+                  <div class="section-content">
+                    <p>Ao selecionar o nome de uma Terra Indígena, o SOMAI dá destaque à essa Terra. Além do zoom, é possível gerar relatórios individuais para a Terra selecionada com informações individualizadas tais como: presença de conflitos e percepção das mudanças ambientais pelos indígenas. O objetivo é que seja disponibilizado nos relatórios dados coletados pelos indígenas que vivem naquela Terra.</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-        <section id="ameacas_clima">
-          <div class="site-section">
-            <div class="container">
-              <div class="four columns">
-                <header class="section-header">
-                  <h2>Ameaças Climáticas</h2>
-                  <p>As informações encontradas foram geradas com base nos modelos climáticos do 5º Relatório de Avaliação do IPCC para 2050. Foi utilizada a média de 17 modelos climáticos diferentes para construir esses mapas que trazem informações das tendências de mudança nos padrões de chuva,  temperatura e distribuição de biodiversidade. Ainda que esses modelos sejam amplamente aceitos no meio científico, há uma incerteza associada a cada um desses modelos, por isso foi incluído um mapa adicional a cada mapa de Ameaças Climáticas, sobre incerteza dos modelos.</p>
-                </header>
+          </section>
+          <section id="terras-indigenas_relatorio">
+            <div class="site-section">
+              <div class="container">
+                <div class="four columns">
+                  <header class="section-header">
+                    <h2>Relatório por Terra Indígena</h2>
+                    <p>O SOMAI possui um relatório específico para cada Terra Indígena Amazônica. No relatório é possível encontrar dados gerais como a localização, área e população; e dados climáticos com foco naquela Terra Indígena. Há também gráficos para o melhor entendimento de como está a situação de cada Terra Indígena Amazônica.</p>
+                  </header>
+                </div>
+                <div class="seven columns offset-by-one">
+                  <div class="section-content">
+                    <p> </p>
+                  </div>
+                </div>
               </div>
-              <div class="seven columns offset-by-one">
-                <div class="section-content">
-                  <div class="gallery">
-                    <nav class="gallery-nav">
-                      <button class="left"><span class="icon"><</span></button>
-                      <button class="right"><span class="icon">></span></button><span class="current">Perda de biodiversidade</span>
-                    </nav>
-                    <div class="gallery-content"><img expand="right" src="img/clim_1.jpg">
+            </div>
+          </section>
+        </section>
+        <section id="ameacas" class="section-group">
+          <section id="ameacas_mapas">
+            <div class="site-section">
+              <div class="container">
+                <div class="four columns">
+                  <header class="section-header">
+                    <h2>Mapas</h2>
+                  </header>
+                </div>
+                <div class="seven columns offset-by-one">
+                  <div class="section-content">
+                    <p>Os mapas apresentados nesta parte trazem diferentes tipos de dados históricos de cada um até o momento atual. Esses dados contêm informações sobre o clima - temperatura, chuva e índices de seca -, dados de estoque de carbono, registros de desmatamento e distribuição das espécies ameaças.</p>
+                    <p>Em Mapas de apoio, é possível realizar a combinação de dados geográficos territoriais, uso do solo e infraestrutura com outros mapas disponíveis no SOMAI, como desmatamento, por exemplo para evidenciar como certas atividades impactam diretamente as Terras Indígenas.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="ameacas_clima">
+            <div class="site-section">
+              <div class="container">
+                <div class="four columns">
+                  <header class="section-header">
+                    <h2>Ameaças Climáticas</h2>
+                    <p>As informações encontradas foram geradas com base nos modelos climáticos do 5º Relatório de Avaliação do IPCC para 2050. Foi utilizada a média de 17 modelos climáticos diferentes para construir esses mapas que trazem informações das tendências de mudança nos padrões de chuva,  temperatura e distribuição de biodiversidade. Ainda que esses modelos sejam amplamente aceitos no meio científico, há uma incerteza associada a cada um desses modelos, por isso foi incluído um mapa adicional a cada mapa de Ameaças Climáticas, sobre incerteza dos modelos.</p>
+                  </header>
+                </div>
+                <div class="seven columns offset-by-one">
+                  <div class="section-content">
+                    <div class="gallery">
+                      <nav class="gallery-nav">
+                        <button class="left"><span class="icon icon-chevron-left"></span></button>
+                        <button class="right"><span class="icon icon-chevron-right"></span></button><span class="current">Perda de biodiversidade</span>
+                      </nav>
+                      <div class="gallery-content"><img expand="right" src="img/clim_1.jpg">
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-        <section id="ameacas_antropica">
-          <div class="site-section">
-            <div class="container">
-              <div class="four columns">
-                <header class="section-header">
-                  <h2>Ameaças Antrópicas</h2>
-                  <p>As Ameaças antrópicas são, basicamente, as mudanças do uso do solo e da paisagem provocadas pela ação humana. As mudanças não aconteceram de maneira igual ao longo da Amazônia brasileira, por isso as alterações ambientais e obras de infraestrutura impactam com uma intensidade diferente cada Terra Indígena.</p>
-                </header>
-              </div>
-              <div class="seven columns offset-by-one">
-                <div class="section-content">
-                  <div class="gallery">
-                    <nav class="gallery-nav">
-                      <button class="left"><span class="icon"><</span></button>
-                      <button class="right"><span class="icon">></span></button><span class="current">Potencial de mineração</span>
-                    </nav>
-                    <div class="gallery-content"><img expand="right" src="img/antr_1.jpg">
+          </section>
+          <section id="ameacas_antropica">
+            <div class="site-section">
+              <div class="container">
+                <div class="four columns">
+                  <header class="section-header">
+                    <h2>Ameaças Antrópicas</h2>
+                    <p>As Ameaças antrópicas são, basicamente, as mudanças do uso do solo e da paisagem provocadas pela ação humana. As mudanças não aconteceram de maneira igual ao longo da Amazônia brasileira, por isso as alterações ambientais e obras de infraestrutura impactam com uma intensidade diferente cada Terra Indígena.</p>
+                  </header>
+                </div>
+                <div class="seven columns offset-by-one">
+                  <div class="section-content">
+                    <div class="gallery">
+                      <nav class="gallery-nav">
+                        <button class="left"><span class="icon icon-chevron-left"></span></button>
+                        <button class="right"><span class="icon icon-chevron-right"></span></button><span class="current">Potencial de mineração</span>
+                      </nav>
+                      <div class="gallery-content"><img expand="right" src="img/antr_1.jpg">
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-        <section id="ameacas_calc">
-          <div class="site-section">
-            <div class="container">
-              <div class="four columns">
-                <header class="section-header">
-                  <h2>Calculadora</h2>
-                  <p>Essa aba utiliza uma combinação dos dados disponíveis em Ameaças climáticas e Ameaças antrópicas para calcular quais Terras Indígenas estão mais ameaçadas, de acordo com os itens selecionados. As Terras Indígenas são classificadas de acordo com a intensidade do impacto sofrido pelas ameaças climáticas ou antrópicas. De maneira interativa e dinâmica pode-se separar os territórios muito impactados daqueles menos impactados por cada ameaça.</p>
-                </header>
-              </div>
-              <div class="seven columns offset-by-one">
-                <div class="section-content">
-                  <div class="gallery">
-                    <nav class="gallery-nav">
-                      <button class="left"><span class="icon"><</span></button>
-                      <button class="right"><span class="icon">></span></button><span class="current">Desmatamento + Terras indígenas</span>
-                    </nav>
-                    <div class="gallery-content"><img expand="right" src="img/calc_1.jpg"></div>
+          </section>
+          <section id="ameacas_calc">
+            <div class="site-section">
+              <div class="container">
+                <div class="four columns">
+                  <header class="section-header">
+                    <h2>Calculadora</h2>
+                    <p>Essa aba utiliza uma combinação dos dados disponíveis em Ameaças climáticas e Ameaças antrópicas para calcular quais Terras Indígenas estão mais ameaçadas, de acordo com os itens selecionados. As Terras Indígenas são classificadas de acordo com a intensidade do impacto sofrido pelas ameaças climáticas ou antrópicas. De maneira interativa e dinâmica pode-se separar os territórios muito impactados daqueles menos impactados por cada ameaça.</p>
+                  </header>
+                </div>
+                <div class="seven columns offset-by-one">
+                  <div class="section-content">
+                    <div class="gallery">
+                      <nav class="gallery-nav">
+                        <button class="left"><span class="icon"><</span></button>
+                        <button class="right"><span class="icon">></span></button><span class="current">Desmatamento + Terras indígenas</span>
+                      </nav>
+                      <div class="gallery-content"><img expand="right" src="img/calc_1.jpg"></div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
         </section>
-      </section>
+      </div>
     </div>
     <footer id="colophon">
       <div class="container">
