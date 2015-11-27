@@ -21,6 +21,7 @@
     "angular-scroll": "~1.0.0",
     "chosen": "~1.4.2",
     "angular-chosen": "https://github.com/localytics/angular-chosen.git#1.0.7",
-    "angular-lazy-img": "~1.2.2"
+    "angular-lazy-img": "~1.2.2",
+    "underscore": "~1.8.3"
   }
 }

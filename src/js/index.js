@@ -1,3 +1,5 @@
+require('./static');
+
 (function(angular, $, _, undefined) {
 
   var app = angular.module('somai', [

@@ -33,7 +33,7 @@ module.exports = function(grunt) {
       all: {
         options: {
           doctype: 'html',
-          pretty: true
+          pretty: false
         },
         files: [{
           expand: true,
