@@ -1,8 +1,9 @@
-(function(angular, $, undefined) {
+(function(angular, $, _, undefined) {
 
   var app = angular.module('somai', [
     'ui.router',
-    'duScroll'
+    'duScroll',
+    'localytics.directives'
   ]);
 
   app.value('duScrollOffset', 190);
@@ -59,7 +60,21 @@
         url: 'mapa/'
       })
       .state('terras-indigenas.relatorio', {
-        url: 'relatorio/'
+        url: 'relatorio/',
+        // views: {
+        //   relatorio: {
+        //     controller: 'RelatorioCtrl',
+        //     templateUrl: 'views/relatorio.html'
+        //   }
+        // },
+        // resolve: {
+        //   'TIs': [
+        //     '$http',
+        //     function($http) {
+        //       return $http.get('data/tis.json');
+        //     }
+        //   ]
+        // }
       })
       .state('ameacas', {
         url: '/ameacas/'
@@ -226,8 +241,20 @@
     }
   ]);
 
+  app.controller('RelatorioCtrl', [
+    '$scope',
+    '$http',
+    function($scope, $http) {
+      $http.get('data/tis.json').success(function(data) {
+        $scope.tis = _.sortBy(data, function(item) {
+          return item.nome || item.nome_ti;
+        });
+      });
+    }
+  ])
+
   angular.element(document).ready(function() {
     angular.bootstrap(document, ['somai']);
   });
 
-})(window.angular, window.jQuery);
+})(window.angular, window.jQuery, window._);

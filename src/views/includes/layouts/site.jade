@@ -10,6 +10,7 @@ html
     link(rel="stylesheet" href="static/skeleton/css/normalize.css")
     link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css")
     //- link(rel="stylesheet" href="static/skeleton/css/skeleton.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.min.css")
     link(rel="stylesheet" href="css/icons.css")
     link(rel="stylesheet" href="css/app.css")
     block head
@@ -37,7 +38,9 @@ html
       .container
         .twelve.columns
           block colophon
+    script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js")
     script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js")
+    script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.jquery.min.js")
     script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular.min.js")
     script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js")
     script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-scroll/1.0.0/angular-scroll.min.js")
@@ -45,5 +48,6 @@ html
     //- script(type="text/javascript" src="static/angular/angular.min.js")
     //- script(type="text/javascript" src="static/ui-router/release/angular-ui-router.min.js")
     //- script(type="text/javascript" src="static/angular-scroll/angular-scroll.min.js")
+    script(type="text/javascript" src="static/angular-chosen/chosen.js")
     script(type="text/javascript" src="app.js")
     block foot
