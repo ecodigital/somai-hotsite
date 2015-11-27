@@ -8,6 +8,7 @@
     <meta name="fragment" content="!">
     <link rel="stylesheet" href="static/skeleton/css/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.min.css">
     <link rel="stylesheet" href="css/icons.css">
     <link rel="stylesheet" href="css/app.css">
     <!-- Extra CSS and <head /> tags here-->
@@ -326,7 +327,22 @@
                 </div>
                 <div class="seven columns offset-by-one">
                   <div class="section-content">
-                    <p> </p>
+                    <div ng-controller="RelatorioCtrl" class="relatorio-content">
+                      <p>
+                        <select chosen data-placeholder="Selecione um território indígena" no-results-text="'Não encontramos uma terra indígena com este nome'" ng-model="ti" ng-options="ti.nome || ti.nome_ti for ti in tis">
+                        </select>
+                      </p>
+                      <article ng-show="ti" class="ti">
+                        <p><span class="icon icon-location-pin"></span><span class="label">Localização:</span><span class="value">{{ti.uf}}</span></p>
+                        <p><span class="icon icon-flag"></span><span class="label">Situação legal:</span><span class="value">{{ti.situacao_legal}}</span></p>
+                        <p><span class="icon icon-hair-cross"></span><span class="label">Área:</span><span class="value">{{ti.area}} m²</span></p>
+                        <p><span class="icon icon-users"></span><span class="label">População:</span><span class="value">{{ti.populacao}}</span></p>
+                      </article>
+                      <form ng-show="ti" target="_blank" method="post" action="http://www.somai.org/relatorios/relatorio_pti/mudancasclimaticas.php">
+                        <input type="hidden" name="id" value="{{ti.id}}">
+                        <input type="submit" value="Acesse o relatório completo" class="full">
+                      </form>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -430,10 +446,13 @@
         <div class="twelve columns"><a ui-sref="home" class="footer-brand">SOMAI<img src="img/logo.png"></a><a href="#" class="platform"><span class="icon icon-map"></span>Explore a plataforma</a></div>
       </div>
     </footer>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-scroll/1.0.0/angular-scroll.min.js"></script>
+    <script type="text/javascript" src="static/angular-chosen/chosen.js"></script>
     <script type="text/javascript" src="app.js"></script>
     <!-- Extra footer content here (before closing <body /> tag)-->
   </body>

@@ -1,0 +1,15 @@
+
+<p>
+  <select chosen data-placeholder="Selecione um território indígena" no-results-text="'Não encontramos uma terra indígena com este nome'" ng-model="ti" ng-options="ti.nome || ti.nome_ti for ti in tis">
+  </select>
+</p>
+<article ng-show="ti" class="ti">
+  <p><span class="icon icon-location-pin"></span><span class="label">Localização:</span><span class="value">{{ti.uf}}</span></p>
+  <p><span class="icon icon-flag"></span><span class="label">Situação legal:</span><span class="value">{{ti.situacao_legal}}</span></p>
+  <p><span class="icon icon-hair-cross"></span><span class="label">Área:</span><span class="value">{{ti.area}} m²</span></p>
+  <p><span class="icon icon-users"></span><span class="label">População:</span><span class="value">{{ti.populacao}}</span></p>
+</article>
+<form ng-show="ti" target="_blank" method="post" action="http://www.somai.org/relatorios/relatorio_pti/mudancasclimaticas.php">
+  <input type="hidden" name="id" value="{{ti.id}}">
+  <input type="submit" value="Acesse o relatório completo" class="full">
+</form>
