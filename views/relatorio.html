@@ -10,6 +10,6 @@
   <p><span class="icon icon-users"></span><span class="label">População:</span><span class="value">{{ti.populacao}}</span></p>
 </article>
 <form ng-show="ti" target="_blank" method="post" action="http://www.somai.org/relatorios/relatorio_pti/mudancasclimaticas.php">
-  <input type="hidden" name="id" value="{{ti.id}}">
+  <input type="hidden" name="id" ng-value="ti.id">
   <input type="submit" value="Acesse o relatório completo" class="full">
 </form>
