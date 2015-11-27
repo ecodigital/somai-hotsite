@@ -182,7 +182,12 @@ require('./static');
 
       $scope.$on('$stateChangeSuccess', function(ev, toState, toParams, fromState, fromParams) {
 
+          if(toParams.inner) {
+            $document.scrollTop(0);
+          }
+
         $timeout(function() {
+
           if(!fromState.name || fromParams.inner) {
             var el = angular.element(document.getElementById(toState.name.replace('.', '_')));
             if(el.length) {
