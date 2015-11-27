@@ -222,10 +222,7 @@
     '$scope',
     'Data',
     function($scope, Data) {
-
       $scope.items = Data.data;
-      console.log($scope.items);
-
     }
   ]);
 
