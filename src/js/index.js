@@ -60,21 +60,7 @@
         url: 'mapa/'
       })
       .state('terras-indigenas.relatorio', {
-        url: 'relatorio/',
-        // views: {
-        //   relatorio: {
-        //     controller: 'RelatorioCtrl',
-        //     templateUrl: 'views/relatorio.html'
-        //   }
-        // },
-        // resolve: {
-        //   'TIs': [
-        //     '$http',
-        //     function($http) {
-        //       return $http.get('data/tis.json');
-        //     }
-        //   ]
-        // }
+        url: 'relatorio/'
       })
       .state('ameacas', {
         url: '/ameacas/'
@@ -186,7 +172,8 @@
     '$state',
     '$document',
     '$timeout',
-    function($scope, $state, $document, $timeout) {
+    '$http',
+    function($scope, $state, $document, $timeout, $http) {
 
       $scope.isHome = true;
 
@@ -230,6 +217,17 @@
         if($scope.stateSpy)
           $state.go('home');
       });
+
+
+      /*
+       * Relatorio
+       */
+      $http.get('data/tis.json').success(function(data) {
+        $scope.tis = _.sortBy(data, function(item) {
+          return item.nome || item.nome_ti;
+        });
+      });
+
     }
   ]);
 
@@ -240,18 +238,6 @@
       $scope.items = Data.data;
     }
   ]);
-
-  app.controller('RelatorioCtrl', [
-    '$scope',
-    '$http',
-    function($scope, $http) {
-      $http.get('data/tis.json').success(function(data) {
-        $scope.tis = _.sortBy(data, function(item) {
-          return item.nome || item.nome_ti;
-        });
-      });
-    }
-  ])
 
   angular.element(document).ready(function() {
     angular.bootstrap(document, ['somai']);

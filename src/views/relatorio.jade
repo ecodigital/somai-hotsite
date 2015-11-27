@@ -1,7 +1,6 @@
 p
   select(chosen data-placeholder="Selecione um território indígena" no-results-text="'Não encontramos uma terra indígena com este nome'" ng-model="ti" ng-options="ti.nome || ti.nome_ti for ti in tis")
-    //- option(value="")
-    //- option(ng-repeat="t in tis" ng-value="t.id") {{t.nome}}
+    
 article.ti(ng-show="ti")
   p
     span.icon.icon-location-pin
@@ -19,6 +18,7 @@ article.ti(ng-show="ti")
     span.icon.icon-users
     span.label População:
     span.value {{ti.populacao}}
+    
 form(ng-show="ti" target="_blank" method="post" action="http://www.somai.org/relatorios/relatorio_pti/mudancasclimaticas.php")
   input(type="hidden" name="id" ng-value="ti.id")
   input.full(type="submit" value="Acesse o relatório completo")
