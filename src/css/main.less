@@ -45,15 +45,48 @@ input[type="submit"] {
     color: #fff;
     background: @text_orange;
   }
+  &.full {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.row {
+  margin-bottom: 60px;
+}
+
+body.inner {
+  #masthead {
+    height: 17px;
+    overflow: hidden;
+    margin-bottom: 60px;
+    .header-fixed {
+      border-bottom: 1px solid #898989;
+    }
+    &:after {
+      background: #fff;
+    }
+    li:after {
+      background: #898989 !important;
+    }
+  }
+  #summary {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+  }
 }
 
 #masthead {
   background: url(../img/header.jpg) no-repeat;
+  background-attachment: fixed;
   background-position: 50% 15%;
   background-size: cover;
   position: relative;
   padding: 20px 0 40px;
   color: #fff;
+  transition: all .4s ease-in-out;
+  height: 400px;
   &:after {
     content: '';
     position: absolute;
@@ -62,6 +95,7 @@ input[type="submit"] {
     left: 0;
     right: 0;
     background: @overblue;
+    transition: all .4s ease-in-out;
   }
   .header-content {
     position: relative;
@@ -77,7 +111,8 @@ input[type="submit"] {
     padding: 0;
     z-index: 99999;
     transition: all .4s ease-in-out;
-    &.active {
+    &.active,
+    &.locked {
       color: #999;
       background: #fff;
       h1 {
@@ -161,6 +196,11 @@ input[type="submit"] {
       margin: 0;
       padding: 0;
       float: right;
+      &:hover {
+        > li:after {
+          opacity: .3;
+        }
+      }
       > li {
         float: left;
         margin: 0 0 0 30px;
@@ -197,6 +237,9 @@ input[type="submit"] {
         &:hover {
           > .child {
             z-index: 100;
+          }
+          &:after {
+            opacity: 1;
           }
         }
         &.active {
@@ -265,6 +308,7 @@ input[type="submit"] {
 
 #summary {
   margin: -40px 0 40px;
+  transition: all .4s ease-in-out;
 }
 
 #colophon {
@@ -345,10 +389,11 @@ input[type="submit"] {
       color: @text_orange;
     }
     h4 {
-      font-size: 24px;
+      font-size: 22px;
       font-family: "Open Sans";
       font-weight: normal;
       text-transform: none;
+      margin: 0;
     }
     .partner-list {
       margin: 0;
@@ -358,7 +403,7 @@ input[type="submit"] {
         width: 50%;
         float: left;
         text-align: center;
-        margin: 0 0 20px;
+        margin: 0 0 30px;
       }
     }
     .gallery {
@@ -424,4 +469,36 @@ table.duel-table {
       font-size: 14px;
     }
   }
+}
+
+#glossario {
+  form {
+    margin: 0 0 60px;
+    input[type=text] {
+      background: #fbcebb;
+      border: 0;
+      padding: 15px 20px;
+      display: block;
+      margin: 0;
+      width: 100%;
+      border-radius: 4px;
+      height: auto;
+    }
+  }
+  article {
+    margin: 0 0 30px;
+    h2 {
+      font-size: 22px;
+      color: @text_orange;
+      margin: 0 0 10px;
+      font-family: "Open Sans";
+      font-weight: 700;
+      text-transform: none;
+    }
+    p {
+      margin: 0;
+      font-size: 16px;
+    }
+  }
+
 }

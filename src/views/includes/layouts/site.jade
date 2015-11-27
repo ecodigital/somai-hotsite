@@ -13,10 +13,10 @@ html
     link(rel="stylesheet" href="css/icons.css")
     link(rel="stylesheet" href="css/app.css")
     block head
-  body(ng-controller="SiteCtrl")
+  body(ng-controller="SiteCtrl" ng-class="{inner: isInner}")
     header#masthead
       .header-content
-        .header-fixed(scroll-class="active" offset="100")
+        .header-fixed(scroll-class="active" offset="100" ng-class="{locked: !isHome}")
           .container.row
             .three.columns
               block header-branding
@@ -30,8 +30,9 @@ html
                 block header-info
     section#summary
       block summary
-    .site-sections
-      block sections
+    div(ui-view)
+      .site-sections
+        block sections
     footer#colophon
       .container
         .twelve.columns

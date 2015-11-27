@@ -24,6 +24,22 @@
       .state('home', {
         url: '/'
       })
+      .state('glossario', {
+        url: '/glossario/',
+        templateUrl: 'views/glossario.html',
+        controller: 'GlossarioCtrl',
+        params: {
+          inner: true
+        },
+        resolve: {
+          Data: [
+            '$http',
+            function($http) {
+              return $http.get('data/glossario.json');
+            }
+          ]
+        }
+      })
       .state('sobre', {
         url: '/sobre/'
       })
@@ -148,29 +164,68 @@
         }
       }
     }
-  ])
+  ]);
 
   app.controller('SiteCtrl', [
     '$scope',
     '$state',
     '$document',
-    function($scope, $state, $document) {
+    '$timeout',
+    function($scope, $state, $document, $timeout) {
 
-      $scope.$on('$stateChangeSuccess', function(ev, toState, toParams, fromState) {
-        if(!fromState.name) {
-          var el = angular.element(document.getElementById(toState.name.replace('.', '_')));
-          if(el.length) {
-            $document.scrollToElementAnimated(el);
+      $scope.isHome = true;
+
+      $scope.$on('$stateChangeSuccess', function(ev, toState, toParams, fromState, fromParams) {
+
+        $timeout(function() {
+          if(!fromState.name || fromParams.inner) {
+            var el = angular.element(document.getElementById(toState.name.replace('.', '_')));
+            if(el.length) {
+              $document.scrollToElementAnimated(el);
+            }
           }
+        }, 450);
+
+        if(toState.name.indexOf('home') == -1)
+          $scope.isHome = false;
+        else
+          $scope.isHome = true;
+
+        if(toState.params && toState.params.inner) {
+          $scope.isInner = true;
+        } else {
+          $scope.isInner = false;
+        }
+
+      });
+
+      $scope.stateSpy = true;
+      $scope.$on('$stateChangeStart', function(ev, toState, toParams) {
+        if(toParams.inner) {
+          $scope.stateSpy = false;
+        } else {
+          $scope.stateSpy = true;
         }
       });
-
       $scope.$on('duScrollspy:becameActive', function($ev, $element, $target) {
-        $state.go($target.attr('id').replace('_', '.'));
+        if($scope.stateSpy)
+          $state.go($target.attr('id').replace('_', '.'));
       });
       $scope.$on('duScrollspy:becameInactive', function() {
-        $state.go('home');
+        if($scope.stateSpy)
+          $state.go('home');
       });
+    }
+  ]);
+
+  app.controller('GlossarioCtrl', [
+    '$scope',
+    'Data',
+    function($scope, Data) {
+
+      $scope.items = Data.data;
+      console.log($scope.items);
+
     }
   ]);
 

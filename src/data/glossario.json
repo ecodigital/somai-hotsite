@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Antrópico",
+    "desc": "Atividades que são feitas pelo ser humano.",
+    "long_desc": "Algumas atividades antrópicas geram mais impactos negativos e por isso despertam maior preocupação, como a construção de estradas, hidrelétricas e a mineração."
+  },
+  {
+    "title": "Bacia",
+    "desc": "Bacia, ou bacia hidrográfica, é uma região com um conjunto de rios.",
+    "long_desc": "As bacias são definidas pela diferença de relevo. A bacia mais conhecida do Brasil é a bacia Amazônica."
+  },
+  {
+    "title": "Sub-bacia",
+    "desc": "Uma parte dentro da bacia.",
+    "long_desc": "A sub-bacia do Tapajós, por exemplo, está dentro da bacia Amazônica."
+  },
+  {
+    "title": "Biodiversidade",
+    "desc": "Bio, significa vida, e diversidade significa variedade. Assim, biodiversidade é a variedade de plantas, animais e outros organismos vivos de um local.",
+    "long_desc": "Florestas preservadas protegem animais e plantas que podem ser encontrados nela e, por isso, têm maior biodiversidade do que florestas degradadas ou monoculturas.",
+    "extra": "O desmatamento, entre outros impactos ambientais, tem ameaçado a sobrevivência de algumas espécies. Essas espécies são consideradas “ameaçadas de extinção” e podem deixar de existir no futuro  se não forem preservadas."
+  }
+]

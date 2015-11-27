@@ -1,0 +1,10 @@
+section#glossario
+  .container
+    .six.columns.offset-by-three
+      form#glossario-form
+        input(type="text" ng-model="search" placeholder="busque por um termo")
+      #glossario-data
+        article(ng-repeat="item in items | filter:search")
+          h2 {{item.title}}
+          p {{item.desc}}
+      
