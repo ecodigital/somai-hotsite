@@ -327,10 +327,9 @@
                 </div>
                 <div class="seven columns offset-by-one">
                   <div class="section-content">
-                    <div ng-controller="RelatorioCtrl" class="relatorio-content">
+                    <div class="relatorio-content">
                       <p>
-                        <select chosen data-placeholder="Selecione um território indígena" no-results-text="'Não encontramos uma terra indígena com este nome'" ng-model="ti" ng-options="ti.nome || ti.nome_ti for ti in tis">
-                        </select>
+                        <select chosen data-placeholder="Selecione um território indígena" no-results-text="'Não encontramos uma terra indígena com este nome'" ng-model="ti" ng-options="ti.nome || ti.nome_ti for ti in tis"></select>
                       </p>
                       <article ng-show="ti" class="ti">
                         <p><span class="icon icon-location-pin"></span><span class="label">Localização:</span><span class="value">{{ti.uf}}</span></p>
