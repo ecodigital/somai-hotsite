@@ -51,6 +51,10 @@ input[type="submit"] {
   }
 }
 
+.container {
+  width: 90%;
+}
+
 .row {
   margin-bottom: 60px;
 }
@@ -87,6 +91,14 @@ body.inner {
   color: #fff;
   transition: all .4s ease-in-out;
   height: 400px;
+  .header-branding {
+    float: left;
+    position: relative;
+  }
+  .header-navigation {
+    float: right;
+    position: relative;
+  }
   &:after {
     content: '';
     position: absolute;
@@ -109,7 +121,7 @@ body.inner {
     right: 0;
     height: 77px;
     padding: 0;
-    z-index: 99999;
+    z-index: 9999;
     transition: all .4s ease-in-out;
     &.active,
     &.locked {
@@ -353,7 +365,7 @@ body.inner {
     text-transform: uppercase;
     margin: 0 0 30px;
   }
-  p {
+  p.desc {
     color: @text_gray;
     font-size: 16px;
     height: 220px;
@@ -575,3 +587,5 @@ article.ti {
   }
 
 }
+
+@import "responsive";

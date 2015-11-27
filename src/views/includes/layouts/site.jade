@@ -8,9 +8,8 @@ html
     meta(name="viewport" content="width=device-width,initial-scale=1")
     meta(name="fragment" content="!")
     link(rel="stylesheet" href="static/skeleton/css/normalize.css")
-    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css")
-    //- link(rel="stylesheet" href="static/skeleton/css/skeleton.css")
-    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.min.css")
+    link(rel="stylesheet" href="static/skeleton/css/skeleton.css")
+    link(rel="stylesheet" href="static/chosen/chosen.min.css")
     link(rel="stylesheet" href="css/icons.css")
     link(rel="stylesheet" href="css/app.css")
     block head
@@ -18,12 +17,13 @@ html
     header#masthead
       .header-content
         .header-fixed(scroll-class="active" offset="100" ng-class="{locked: !isHome}")
-          .container.row
-            .three.columns
-              block header-branding
-            .nine.columns
-              nav#mastnav
-                block header-nav
+          .container
+            .twelve.columns
+              .header-branding
+                block header-branding
+              .header-navigation
+                  nav#mastnav
+                    block header-nav
         .info
           .container
             .twelve.columns
