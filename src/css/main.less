@@ -493,7 +493,10 @@ body.inner {
       }
       .gallery-content {
         img {
-          display: block;
+          display: none;
+          &.active {
+            display: block !important;
+          }
         }
       }
     }

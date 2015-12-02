@@ -5,14 +5,14 @@ block section-title
   p As informações encontradas foram geradas com base nos modelos climáticos do 5º Relatório de Avaliação do IPCC para 2050. Foi utilizada a média de 17 modelos climáticos diferentes para construir esses mapas que trazem informações das tendências de mudança nos padrões de chuva,  temperatura e distribuição de biodiversidade. Ainda que esses modelos sejam amplamente aceitos no meio científico, há uma incerteza associada a cada um desses modelos, por isso foi incluído um mapa adicional a cada mapa de Ameaças Climáticas, sobre incerteza dos modelos.
 
 block section-content
-  .gallery
+  .gallery(image-gallery)
     nav.gallery-nav
       button.left
         span.icon.icon-chevron-left
       button.right
         span.icon.icon-chevron-right
-      span.current Perda de biodiversidade
+      span.current 
     .gallery-content
-      img(expand="right" lazy-img="img/clim_1.jpg")
-      //- img(expand="right" lazy-img="img/clim_2.jpg")
-      //- img(expand="right" lazy-img="img/clim_3.jpg")
+      img(expand="right" lazy-img="img/clim_1.jpg" alt="Perda de biodiversidade")
+      img(expand="right" lazy-img="img/clim_2.jpg" alt="Lorem ipsum dolor sit")
+      img(expand="right" lazy-img="img/clim_3.jpg" alt="Amet ipsum dor")
