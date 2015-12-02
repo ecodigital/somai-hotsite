@@ -5,8 +5,7 @@ require('./static');
   var app = angular.module('somai', [
     'ui.router',
     'duScroll',
-    'localytics.directives',
-    'angularLazyImg'
+    'localytics.directives'
   ]);
 
   app.value('duScrollOffset', 190).run([
