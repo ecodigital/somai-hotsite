@@ -22,7 +22,7 @@ html
               .header-branding
                 block header-branding
               .header-navigation
-                  nav#mastnav
+                  nav#mastnav(ng-click="toggleNav()" ng-class="{active: showNav}")
                     block header-nav
         .info
           .container

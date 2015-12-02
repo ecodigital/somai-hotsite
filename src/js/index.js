@@ -9,7 +9,19 @@ require('./static');
     'angularLazyImg'
   ]);
 
-  app.value('duScrollOffset', 190);
+  app.value('duScrollOffset', 190).run([
+    'duScrollOffset',
+    function(duScrollOffset) {
+      // $(window).on('resize', function() {
+      //   if($(window).width() <= 770) {
+      //     duScrollOffset = 50;
+      //   } else {
+      //     duScrollOffset = 190;
+      //   }
+      // });
+      // $(window).resize();
+    }
+  ]);
 
   app.config([
     '$stateProvider',
@@ -231,6 +243,17 @@ require('./static');
     '$http',
     function($scope, $state, $document, $timeout, $http) {
 
+      /*
+       * Navigation
+       */
+      $scope.showNav = false;
+      $scope.toggleNav = function() {
+        if($scope.showNav)
+          $scope.showNav = false;
+        else
+          $scope.showNav = true;
+      }
+
       $scope.isHome = true;
 
       $scope.$on('$stateChangeSuccess', function(ev, toState, toParams, fromState, fromParams) {
@@ -264,6 +287,9 @@ require('./static');
 
       $scope.stateSpy = true;
       $scope.$on('$stateChangeStart', function(ev, toState, toParams) {
+
+        $scope.showNav = false;
+
         if(toParams.inner) {
           $scope.stateSpy = false;
         } else {
