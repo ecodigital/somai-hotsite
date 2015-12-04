@@ -32,75 +32,75 @@
     "extra": "A quantidade de chuvas ao longo do ano e as estações de seca e chuva afetam toda a vegetação e influencia quais plantas e animais são encontradas em cada região."
   },
   {
-    "title": "Bioma",
-    "desc": "",
-    "long_desc": "",
+    "title": "Clima",
+    "desc": "É definido pelos valores médios de temperatura e chuva de uma região.",
+    "long_desc": "Cada região possui um clima específico. As vezes o clima é conhecido por suas características mais marcantes, como úmido e quente.",
     "extra": ""
   },
   {
-    "title": "Bioma",
-    "desc": "",
-    "long_desc": "",
+    "title": "Desmatamento",
+    "desc": "Quando a floresta é derrubada em uma determinada área, diz-se que a área foi desmatada, ou seja, ficou sem mata.",
+    "long_desc": "Há casos em que árvores são derrubadas para o plantio de uma roça ou para a construção de casas. Se poucas árvores são derrubadas e a maior parte da floresta é mantida, a floresta consegue se manter e se recuperar. Mas se grandes áreas são derrubadas, a floresta pode acabar morrendo.",
     "extra": ""
   },
   {
-    "title": "Bioma",
-    "desc": "",
-    "long_desc": "",
+    "title": "Estoque de carbono",
+    "desc": "O carbono é um elemento químico encontrado em todos os seres vivos. As árvores, em seu crescimento, guardam o carbono em seus troncos e raízes, por isso as florestas são consideradas “estoques” de carbono.",
+    "long_desc": "Terras Indígenas, por manterem grandes áreas de floresta, são consideradas fundamentais para a manutenção do estoque de carbono.",
     "extra": ""
   },
   {
-    "title": "Bioma",
-    "desc": "",
-    "long_desc": "",
+    "title": "Focos de Calor",
+    "desc": "Áreas com temperaturas muito altas registradas pelos satélites.",
+    "long_desc": "Na maioria das vezes os focos de calor representam informações de fogo ou queimadas, mas algumas vezes os focos de calor podem ser causados por outros fatores que não o fogo. Mesmo com esses “erros”, os dados de focos de calor são extremamente importantes no monitoramento de queimadas.",
     "extra": ""
   },
   {
-    "title": "Bioma",
-    "desc": "",
-    "long_desc": "",
+    "title": "Gases de efeito estufa",
+    "desc": "Há vários tipos de gases no ar. Os gases do efeito estufa são importantes por ter a capacidade de reter o calor e deixar o planeta com uma temperatura estável.",
+    "long_desc": "Os principais gases do efeito estufa (GEE) são o dióxido de carbono (CO2), metano (CH4), óxido nitroso (N2O) e vapor d’água (H2O). Juntos, esses gases funcionam como o vidro transparente, eles deixam a luz entrar e só uma parte do calor consegue sair. Sem essa camada de gases, a temperatura da Terra seria 33o a menos. Porém, com uma maior emissão de GEE por atividades do ser humano, a camada de gases na atmosfera fica mais grossa, não permitindo que o calor saia da Terra. Esse fenômeno chamamos de aquecimento global.",
     "extra": ""
   },
   {
-    "title": "Bioma",
-    "desc": "",
-    "long_desc": "",
+    "title": "Hidrelétrica",
+    "desc": "Hidrelétrica é um conjunto de equipamentos e máquinas que produzem energia elétrica usando a água dos rios.",
+    "long_desc": "Para construir uma hidrelétrica é preciso mudar a paisagem da área que será afetada. Os impactos mais comuns são: desmatamento; alagamento; e desalojamento das pessoas que vivem na área afetada.",
     "extra": ""
   },
   {
-    "title": "Bioma",
-    "desc": "",
-    "long_desc": "",
+    "title": "Mitigação",
+    "desc": "Tentar diminuir os problemas.",
+    "long_desc": "<p>- Com mitigação: pensar em cenários climáticos futuros “com mitigação”, quer dizer que serão feitos esforços para diminuir as emissões dos gases de efeito estufa e tentar melhorar as condições do clima.</p><p>Manter as florestas em pé ou recuperar as florestas são exemplos de ações que reduzem as emissões dos gases do efeito estufa.</p><p>- Sem mitigação: os cenários climáticos futuros “sem mitigação” são aqueles em que não serão feitos esforços para diminuir a emissão dos gases de efeito estufa, ou seja, as emissões continuarão no mesmo ritmo.</p><p>Se as atividades antrópicas continuarem como estão, sem nenhum esforço para diminuir as emissões de gases do efeito estufa, no futuro a temperatura poderá aumentar muito acima do previsto.</p>",
     "extra": ""
   },
   {
-    "title": "Bioma",
-    "desc": "",
-    "long_desc": "",
+    "title": "Potencial de Mineração",
+    "desc": "São áreas que têm minérios e já são exploradas atualmente ou podem ser exploradas no futuro.",
+    "long_desc": "Existem estudos para saber onde estão os minérios para serem explorados. A partir desses estudos são feitos mapas de locais onde seria interessante a exploração desses minérios.",
     "extra": ""
   },
   {
-    "title": "Bioma",
-    "desc": "",
-    "long_desc": "",
+    "title": "Reservatório",
+    "desc": "Um tipo de barragem para armazenar uma quantidade de água, muito usado em hidrelétricas.",
+    "long_desc": "Esses reservatórios são áreas alagadas construídas para que a hidrelétrica funcione e gere energia elétrica. Para alagar essas áreas, normalmente é necessário desmatar uma grande área e desalojar muitas pessoas.",
     "extra": ""
   },
   {
-    "title": "Bioma",
-    "desc": "",
-    "long_desc": "",
+    "title": "Satélite",
+    "desc": "Uma máquina que sobrevoa a Terra e faz registros dela.",
+    "long_desc": "Os satélites são usados para controlar, entre outras coisas, as taxas de desmatamento.",
     "extra": ""
   },
   {
-    "title": "Bioma",
-    "desc": "",
-    "long_desc": "",
+    "title": "Temperatura",
+    "desc": "É uma medida do calor ou do frio que sentimos.",
+    "long_desc": "Durante o dia, assim como ao longo do ano, a temperatura pode variar de um valor máximo (quando a temperatura fica alta e sentimos mais calor) a um mínimo (quando a temperatura baixa e sentimos mais frio).",
     "extra": ""
   },
   {
-    "title": "Bioma",
-    "desc": "",
-    "long_desc": "",
+    "title": "Unidade de Conservação",
+    "desc": "Áreas Protegidas que se dividem em dois grupos, de Proteção Integral e de Uso Sustentável. Unidade de Conservação de Proteção Integral são chamadas assim porque não é permitido pessoas morarem nelas.",
+    "long_desc": "Existem várias categorias de Unidades de Conservação, um exemplo são as Reservas Extrativistas, que são o lar de povos e comunidades tradicionais que têm como base de sustento os recursos naturais das florestas e matas.",
     "extra": ""
   }
 ]
