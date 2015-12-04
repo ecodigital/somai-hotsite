@@ -67,6 +67,9 @@ require('./static');
       .state('sobre.parceiros', {
         url: 'parceiros/'
       })
+      .state('sobre.contato', {
+        url: 'contato/'
+      })
       .state('terras-indigenas', {
         url: '/terras-indigenas/'
       })
