@@ -55,6 +55,13 @@ require('./static');
           ]
         }
       })
+      .state('parceiros', {
+        url: '/parceiros/',
+        templateUrl: 'views/parceiros.html',
+        params: {
+          inner: true
+        }
+      })
       .state('sobre', {
         url: '/sobre/'
       })

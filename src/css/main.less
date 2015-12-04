@@ -595,7 +595,28 @@ article.ti {
       font-size: 16px;
     }
   }
+}
 
+#parceiros {
+  .parceiro-group {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 60px;
+    &:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+    }
+    h2 {
+      font-size: 36px;
+      color: @text_orange;
+    }
+    .parceiro-item {
+      margin-bottom: 60px;
+      .avatar img {
+        margin: 0 auto 40px;
+        display: block;
+      }
+    }
+  }
 }
 
 @import "responsive";
