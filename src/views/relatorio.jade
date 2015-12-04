@@ -1,5 +1,5 @@
 p
-  select(chosen data-placeholder="Selecione uma terra indígena" no-results-text="'Não encontramos uma terra indígena com este nome'" ng-model="ti" ng-options="ti.nome || ti.nome_ti for ti in tis")
+  select(chosen data-placeholder="Selecione uma terra indígena" no-results-text="'Não encontramos uma terra indígena com este nome'" ng-model="ti" ng-options="ti.nome || ti.nome_ti for ti in tis track by ti.id")
     
 article.ti(ng-show="ti")
   p
