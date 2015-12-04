@@ -1,0 +1,25 @@
+extends views/includes/layouts/site
+
+block title
+  title SOMAI
+  
+block head
+
+block header-branding
+  h1(du-smooth-scroll="masthead")
+    a(ui-sref="home") SOMAI
+      img(src="img/logo.png")
+      img.active(src="img/logo_cor.png")
+
+block header-info
+  h2 404
+  p Não encontramos o que você procura
+
+block colophon
+  a.footer-brand(ui-sref="home") SOMAI
+    img(src="img/logo.png")
+  a.platform(href="http://www.somai.org/")
+    span.icon.icon-map
+    | Explore a plataforma
+    
+block foot
