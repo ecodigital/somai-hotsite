@@ -6,5 +6,5 @@ section#glossario
       #glossario-data
         article(ng-repeat="item in items | filter:search")
           h2 {{item.title}}
-          p {{item.desc}}
-      
+          p.desc {{item.desc}}
+          .long-desc(ng-bind-html="item.long_desc | safe")

@@ -132,6 +132,18 @@ require('./static');
     }
   ]);
 
+  app.filter('safe', [
+    '$sce',
+    function($sce) {
+      return _.memoize(function(input) {
+        if(input.indexOf('<p>') == -1) {
+          input = '<p>' + input + '</p>';
+        }
+        return $sce.trustAsHtml(input);
+      });
+    }
+  ]);
+
   app.directive('scrollClass', [
     function() {
       return {
